@@ -4,11 +4,15 @@
              x:Class="shopping_list.MainPage">
 
     <ScrollView>
-        <Grid RowDefinitions="*,*" ColumnDefinitions="*">
-            <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
-                <Entry></Entry>
-                <Button Text="Submit"></Button>
-            </HorizontalStackLayout>
+        <Grid RowDefinitions="auto,*" ColumnDefinitions="*,*">
+            
+            <Entry Grid.Row="0" Grid.Column="0" TextColor="Black"></Entry>
+            <Button Text="Submit" Grid.Row="0" Grid.Column="1"></Button>
+
+            <CollectionView ItemsSource="{Binding Products}" x:Name="productsCollectionView">
+                
+            </CollectionView>
+
             
         </Grid>
     </ScrollView>
